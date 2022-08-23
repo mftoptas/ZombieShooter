@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        BroadcastMessage("OnDamageTaken"); // By using that broadcast message if zombie take damage from player it will be provoked.
         hitPoints -= damage;
         if (hitPoints <= 0)
         {

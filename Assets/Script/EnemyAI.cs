@@ -32,6 +32,11 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    public void OnDamageTaken()
+    {
+        isProvoked = true; // If zombie take damage from player it will be provoked.
+    }
+
     private void EngageTarget()
     {
         FaceTarget();
