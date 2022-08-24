@@ -354,6 +354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1199384589288163045}
+  - component: {fileID: 7137839501183257703}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -373,12 +374,25 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3615270726588242217}
   - {fileID: 6889623689324727898}
   - {fileID: 7898276883324253048}
+  - {fileID: 3615270726588242217}
   m_Father: {fileID: 400000}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7137839501183257703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206889428707441421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767ac0031178abc429fd11d915a92664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeapon: 1
 --- !u!1001 &1315879036163677839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -396,7 +410,7 @@ PrefabInstance:
       objectReference: {fileID: 2140864971}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -468,9 +482,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1199384589288163045}
     m_Modifications:
+    - target: {fileID: 251140312430072102, guid: cc2ad3d305c51cf42b0a97ca5b026c91, type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2000000}
+    - target: {fileID: 251140312430072102, guid: cc2ad3d305c51cf42b0a97ca5b026c91, type: 3}
+      propertyPath: ammoSlot
+      value: 
+      objectReference: {fileID: 2140864971}
     - target: {fileID: 2337074158996965286, guid: cc2ad3d305c51cf42b0a97ca5b026c91, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: cc2ad3d305c51cf42b0a97ca5b026c91, type: 3}
       propertyPath: m_LocalPosition.x
@@ -540,7 +562,7 @@ PrefabInstance:
       objectReference: {fileID: 2140864971}
     - target: {fileID: 2337074158996965286, guid: 574c12c5ea4d6e6439a44a0b34b525f0, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158996965286, guid: 574c12c5ea4d6e6439a44a0b34b525f0, type: 3}
       propertyPath: m_LocalScale.x
