@@ -11,9 +11,18 @@ public class Weapon : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot;
+    [SerializeField] AmmoType ammoType;
     [SerializeField] float timeBetweenShots = 0.5f;
 
     bool canShoot = true;
+
+    private void OnEnable()
+    {
+        canShoot = true; // After changing weapons it was not shooting because: if I am on a particular weapon, I shoot and then I change to another weapon.
+        // Then this particular weapon script or this weapon instance of our weapon class is being not enabled.
+        // So basically we are never turning can shoot back to true.
+        // But now when player change weapon, player will not wait for reload time.
+    }
 
     void Update()
     {
@@ -26,11 +35,11 @@ public class Weapon : MonoBehaviour
     IEnumerator Shoot()
     {
         canShoot = false;
-        if (ammoSlot.GetCurrentAmmo() > 0)
+        if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
             PlayMuzzleFlash();
             ProcessRayCast();
-            ammoSlot.ReduceCurrentAmmo();
+            ammoSlot.ReduceCurrentAmmo(ammoType);
         }
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;

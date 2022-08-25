@@ -359,6 +359,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 4497290101002410617}
   hitEffect: {fileID: 1269504145101725003, guid: 00399f31f17b36a4a8e72bc9e7d82d6c, type: 3}
   ammoSlot: {fileID: 0}
+  ammoType: 2
   timeBetweenShots: 1
 --- !u!114 &5767929894011367676
 MonoBehaviour:

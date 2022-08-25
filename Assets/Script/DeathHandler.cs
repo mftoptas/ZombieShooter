@@ -15,6 +15,7 @@ public class DeathHandler : MonoBehaviour
     {
         gameOverCanvas.enabled = true;
         Time.timeScale = 0; // Stops the game.
+        FindObjectOfType<WeaponSwitcher>().enabled = false; // Player can not switch weapons after player dies.
         Cursor.lockState = CursorLockMode.None; // Cursor.lockState: Determines whether the hardware pointer is locked to the center of the view, constrained to the window, or not constrained at all. CursorLockMode.None: Cursor behavior is unmodified.
         Cursor.visible = true; // Determines whether the hardware pointer is visible or not.
     }
