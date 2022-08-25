@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 2140864971}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,13 +346,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoSlots:
   - ammoType: 0
-    ammoAmount: 0
-  - ammoType: 0
-    ammoAmount: 0
-  - ammoType: 0
-    ammoAmount: 0
-  - ammoType: 0
-    ammoAmount: 0
+    ammoAmount: 10
+  - ammoType: 1
+    ammoAmount: 20
+  - ammoType: 2
+    ammoAmount: 5
 --- !u!1 &9206889428707441421
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199750, guid: 574c12c5ea4d6e6439a44a0b34b525f0, type: 3}
       propertyPath: m_Name
-      value: PistolTest
+      value: Pistol
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199750, guid: 574c12c5ea4d6e6439a44a0b34b525f0, type: 3}
       propertyPath: m_IsActive
