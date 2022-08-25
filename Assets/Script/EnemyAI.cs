@@ -12,14 +12,22 @@ public class EnemyAI : MonoBehaviour
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity; // A representation of positive infinity.
     bool isProvoked = false;
+    EnemyHealth enemyHealth;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     void Update()
     {
+        if(enemyHealth.IsDead())
+        {
+            enabled = false; // Turns off this enemy component (EnemyAI.cs) when we find we are dead.
+            //navMeshAgent.enabled = false; // I also need to disable navMeshAgent because it does not know it is dead.
+            // Adding this line causes problem but teacher has added this line but it worked well.
+        }
         distanceToTarget = Vector3.Distance(target.position, transform.position);
 
         if (isProvoked)
