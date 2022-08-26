@@ -25,7 +25,7 @@ public class EnemyAI : MonoBehaviour
         if(enemyHealth.IsDead())
         {
             enabled = false; // Turns off this enemy component (EnemyAI.cs) when we find we are dead.
-            //navMeshAgent.enabled = false; // I also need to disable navMeshAgent because it does not know it is dead.
+            navMeshAgent.enabled = false; // I also need to disable navMeshAgent because it does not know it is dead.
             // Adding this line causes problem but teacher has added this line but it worked well.
         }
         distanceToTarget = Vector3.Distance(target.position, transform.position);
