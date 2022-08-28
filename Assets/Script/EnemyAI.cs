@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] Transform target;
     [SerializeField] float chaseRange = 10f;
     [SerializeField] float turnSpeed = 5f;
 
@@ -13,11 +12,13 @@ public class EnemyAI : MonoBehaviour
     float distanceToTarget = Mathf.Infinity; // A representation of positive infinity.
     bool isProvoked = false;
     EnemyHealth enemyHealth;
+    Transform target;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         enemyHealth = GetComponent<EnemyHealth>();
+        target = FindObjectOfType<PlayerHealth>().transform; // Now enemy will chase who has PlayerHealth which only Player has.
     }
 
     void Update()
